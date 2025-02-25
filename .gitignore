@@ -1,0 +1,17 @@
+
+venv/
+.env
+
+
+*.csv
+*.xlsx
+*.json
+*.parquet
+*.h5
+*.zip
+
+
+*.log
+logs/
+debug.log
+error.log
