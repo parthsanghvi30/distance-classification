@@ -1,0 +1,22 @@
+name: Run Tests
+on: [push]
+    
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Runs the workflow on a Linux environment
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3  # Fetches your code from GitHub
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'  # Change this if you're using another Python version
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt  # Installs all required packages
+
+      - name: Run test script
+        run: python test_script.py  # Runs the test script to check dataset loading
